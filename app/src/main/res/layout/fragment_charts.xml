@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    tools:context=".ChartsFragment">
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/chart_til"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight=".60"
+            android:hint="Charts Type"
+            app:startIconDrawable="@mipmap/flow_chart_24">
+
+            <AutoCompleteTextView
+                android:id="@+id/select_charts_type_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/month_invisible"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight=".30"
+            android:hint="Month"
+            android:visibility="gone"
+            app:startIconDrawable="@mipmap/leave_24">
+
+            <AutoCompleteTextView
+                android:id="@+id/select_month_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/load_btn_id"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_weight=".10"
+            android:backgroundTint="#0076f7"
+            android:fontFamily="sans-serif-medium"
+            android:text="Load"
+            android:textStyle="bold"
+            app:icon="@drawable/ic_bar_chart" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll1">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:text="Pie Chart"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pie_chart_view"
+                android:layout_width="match_parent"
+                android:layout_height="500dp" />
+
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:text="Bar Chart"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/bar_chart_view"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_marginVertical="2dp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="@string/radar_chart"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <com.github.mikephil.charting.charts.RadarChart
+                android:id="@+id/radar_chart_view"
+                android:layout_width="match_parent"
+                android:layout_height="500dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:text="Pie Chart"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <com.anychart.AnyChartView
+                android:id="@+id/any_chart_view"
+                android:layout_width="match_parent"
+                android:layout_height="500dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

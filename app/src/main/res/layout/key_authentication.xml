@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="40dp">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_animation_4"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:visibility="visible"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/lock" />
+
+    <LinearLayout
+        android:id="@+id/ll4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie_animation_3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:visibility="visible"
+                app:lottie_loop="false"
+                app:lottie_rawRes="@raw/lock" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="KEY REQUIRED"
+                android:textColor="#000"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/key_entry_id"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/key_entry_background"
+            android:drawableLeft="@mipmap/key_24"
+            android:drawablePadding="12dp"
+            android:hint="Enter Key"
+            android:inputType="textPassword"
+            android:paddingHorizontal="10dp"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/validate_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:backgroundTint="#00C853"
+            android:fontFamily="sans-serif-medium"
+            android:text="Validate key"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

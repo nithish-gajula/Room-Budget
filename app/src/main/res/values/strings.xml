@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Room Budget</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="about_developer">
+
+        This application was developed by - <font face="serif" fgcolor='#CC000000'> <b> Nithish G </b> </font>
+
+    </string>
+
+    <string name="github_info">
+        \t https://github.com/nithish-gajula
+    </string>
+
+    <string name="email_info">
+        \t gajulanithish000@gmail.com
+    </string>
+
+    <string name="mobile_info">
+        \t +919666412120
+    </string>
+
+
+    <string name="update_marquee">
+        Updates Available <a href="#"> Click Here </a>
+    </string>
+
+    <string name="version">2.0</string>
+
+    <string name="app_size">7.5 MB</string>
+
+    <string name="original_key1">vivek143</string>
+    <string name="original_key2">nithu143</string>
+
+    <string name="spreadsheet_url">https://script.google.com/macros/s/AKfycbwaLhbqydAxBruuY01YPdEzeBT16yCKkI7sbBAXkCj1A2zkT7lc36m2WJUeZVmfIfa0/exec</string>
+
+    <string name="radar_chart">
+        Radar Chart  \n
+        <font face="serif" size="10"> tap on radar chart to refresh </font>
+
+    </string>
+
+</resources>

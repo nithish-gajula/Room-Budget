@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeveloperFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:id="@+id/scrollview_developer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/preview_layout_1"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10dp"
+                        android:text="Persons : "
+                        android:textColor="#000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/persons_preview_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:lineSpacingMultiplier="1.5"
+                        android:scrollbars="vertical"
+                        android:text="PERSONS DATA \n COMES HERE"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10dp"
+                        android:text="Months : "
+                        android:textColor="#000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/months_preview_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:lineSpacingMultiplier="1.5"
+                        android:scrollbars="vertical"
+                        android:text="MONTHS DATA \nCOMES HERE"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/running_month_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/preview_layout_1"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:text="Running Month"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/preview_reload_btn_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/running_month_id"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="Reload"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/timer_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/running_month_id"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="#E57373"
+                android:clickable="false"
+                android:fontFamily="sans-serif-medium"
+                android:text="Timer"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+            <View
+                android:id="@+id/horizontal_line_id"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/running_month_id"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="60dp"
+                android:background="#000" />
+
+            <TextView
+                android:id="@+id/title_new_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/horizontal_line_id"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Add New Content"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/new_month_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/title_new_content"
+                android:layout_marginVertical="5dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/month_entry_id"
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:hint="Add Month"
+                    android:inputType="number"
+                    android:minHeight="48dp" />
+
+                <Button
+                    android:id="@+id/month_save_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Add Month"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="7dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/shield_2" />
+
+        <TextView
+            android:id="@+id/version_textview_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:text="VERSION COMES HERE"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ReportBugsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:text="Add Screenshot"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!--Button to open the image selector-->
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/BSelectImage"
+            android:layout_width="250dp"
+            android:layout_height="300dp"
+            android:layout_below="@+id/tv"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_add" />
+
+        <!--ImageView to preview the selected image-->
+        <ImageView
+            android:id="@+id/IVPreviewImage"
+            android:layout_width="250dp"
+            android:layout_height="300dp"
+            android:layout_below="@id/BSelectImage"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:visibility="gone" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/IVPreviewImage"
+            android:layout_margin="10dp"
+            android:hint="Email body"
+            app:startIconDrawable="@mipmap/email_body_48">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailbodyid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:lines="8" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/Bsend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtInputLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:backgroundTint="#F8BBD0"
+            android:drawableLeft="@mipmap/gmail_logo_24"
+            android:fontFamily="sans-serif-medium"
+            android:text="send"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+</ScrollView>
